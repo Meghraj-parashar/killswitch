@@ -61,8 +61,9 @@ pyinstaller --noconsole --onefile killswitch.py
 3. Type ```shell:startup``` and hit Enter
 
 4. Copy ```killswitch.exe``` into that folder
-# Note
-This app is powerful and shuts down your system if the USB receiver is removed. Test carefully and use responsibly.
 
 # Author
 ```Meghraj Parashar```
+
+## Note
+This app is powerful and shuts down your system if the USB receiver is removed. Test carefully and use responsibly.
