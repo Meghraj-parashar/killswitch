@@ -1,24 +1,34 @@
 # KillSwitch
 
-KillSwitch is a Python-based script that monitors the connection of a specific USB device (e.g., a wireless USB receiver). If the device is disconnected, the system will automatically shut down.
+## Description
+**KillSwitch** is a Python-based security tool that automatically shuts down your Windows laptop if a specific USB receiver (like the one used for a wireless keyboard/mouse) is removed. This can act as a personal kill switch to prevent unauthorized access if someone physically tampers with your system.
 
-## Files
+It's useful for:
+- Security-conscious users
+- Public setups
+- Personal privacy in shared environments
 
-- **[killswitch.py](e:/killswitch/killswitch.py)**: The main Python script that monitors the USB device and triggers a shutdown when the device is removed.
-- **[killswitch.bat](e:/killswitch/killswitch.bat)**: A batch file to run the Python script in the background.
+---
 
-## How It Works
+## Features
+- **Auto-shutdown** on USB receiver removal
+- **Runs silently in background**
+- **Prevents multiple instances** from running simultaneously
+- Can be added to **startup** for automatic launch
 
-1. The script continuously checks for the presence of a specific USB device using its Device ID.
-2. If the device is removed, the script initiates a system shutdown.
+---
 
-## Prerequisites
+## How it Works
+1. Waits for a specific USB receiver to be connected
+2. Once connected, monitors the connection continuously
+3. If the receiver is removed, the system **immediately shuts down
 
-- Python 3.x installed on your system.
-- The `wmic` command must be available (default on Windows systems).
+## How to Use
 
-## Usage
+## **Step 1: Clone or Download the Project**
 
-1. Update the `receiver_id` variable in [killswitch.py](e:/killswitch/killswitch.py) with the Device ID of your USB device. You can find the Device ID using the `wmic path Win32_USBHub get DeviceID` command.
-2. Run the batch file [killswitch.bat](e:/killswitch/killswitch.bat) to start the monitoring process.
+```bash
+git clone https://github.com/your-username/killswitch.git
+cd killswitch
+```
 
